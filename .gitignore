@@ -1,0 +1,63 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Environment
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter Notebooks (development only)
+.ipynb_checkpoints/
+*.ipynb
+
+# Logs and temporary files
+*.log
+*.txt
+!requirements.txt
+!plf_base_model.txt
+!plf_enhanced_model.txt
+!plf_prediction_model.txt
+
+# Development data files (exclude from repo)
+Coal Data/
+Monthly Coal data/
+*.csv
+*.pdf
+*.jpg
+*.png
+
+# Pickle files (exclude old versions)
+model_metadata.pkl
