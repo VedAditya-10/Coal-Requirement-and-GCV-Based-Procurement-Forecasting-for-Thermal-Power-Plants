@@ -135,8 +135,8 @@ Predict coal demand for a plant
 │   └── style.css                       # Styling
 ├── plf_base_model.txt                  # LightGBM model for new plants
 ├── plf_enhanced_model.txt              # LightGBM model for existing plants
+├── plf_prediction_model.txt            # LightGBM prediction model
 ├── generalized_model_metadata.pkl      # Model metadata and encodings
-├── FINAL_MERGED_DATA.csv               # Reference data for existing plants
 ├── requirements.txt                    # Python dependencies
 └── README.md                           # This file
 ```
@@ -159,7 +159,32 @@ Predict coal demand for a plant
 - **Frontend**: Vanilla JavaScript, HTML5, CSS3
 - **Deployment**: Render (recommended) or any Python hosting platform
 
+---
+
+## Project Overview
+
+This project focuses on building a data-driven coal demand forecasting model for thermal power plants. Coal is a critical input for power generation, and inaccurate demand estimation can lead to production disruptions or excess inventory costs.
+
+### Problem Statement
+Power plants rely heavily on uninterrupted coal supply. Coal demand fluctuates due to changes in power generation, plant efficiency, fuel quality, and operational conditions. Manual or heuristic-based planning often fails to capture these dynamics, leading to inefficiencies. This project aims to provide a reliable forecasting framework to support better inventory and production planning.
+
+### Data Description
+The model uses cleaned and merged datasets including:
+- Plant-wise and time-series coal consumption
+- Power generation and capacity-related features
+- Fuel quality parameters such as Gross Calorific Value (GCV)
+- Normalized plant identifiers to enable consistent data merging
+
+Special care is taken to handle inconsistent plant naming and heterogeneous data sources.
+
+### Data Source 
+
+This dataset contains plant-level monthly coal data for **Indian thermal power plants**, compiled and standardised from 22 official monthly reports spanning January 2024 to October 2025.
+
+The raw data was sourced from the [National Power Portal (NPP)](https://npp.gov.in/dgrReports), the Government of India's official platform for power sector statistics.
+
+While the original reports are publicly available, they are released as complex, semi-structured Excel files with multi-row headers, regional groupings, embedded totals, and summary tables, making direct analysis difficult. This dataset transforms those raw files into a single, clean, analysis-ready time-series dataset at the individual power plant level.
+
 ## License
 
 MIT License - Feel free to use for your projects!
-
